@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import Portafolio from "./pages/Portafolio.jsx";
 
 const Perfil = lazy(() => import("./pages/Perfil.jsx"));
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 function App() {
   const [startSpin, setStartSpin] = useState(false);
@@ -104,7 +105,7 @@ function App() {
             <span className="inicio-card-inner">
               <span className="inicio-circle">
                 <video
-                  src="/Perfil.mp4"
+                  src={assetUrl("Perfil.mp4")}
                   autoPlay
                   loop
                   muted
@@ -137,7 +138,7 @@ function App() {
           <div className="profile-photo-wrap">
             <img
               className="profile-photo"
-              src="/profile.png"
+              src={assetUrl("profile.png")}
               alt="Retrato artístico para el perfil de Fabricio"
               draggable="false"
             />

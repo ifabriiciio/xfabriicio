@@ -5,6 +5,8 @@ import Particles from "react-tsparticles";
 import { Howl } from "howler";
 import { Canvas, useFrame } from "@react-three/fiber";
 
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 export default function Perfil() {
   const tabAnimation = {
   initial: { opacity: 0, y: 40, filter: "blur(10px)" },
@@ -79,37 +81,37 @@ const songs = [
     title: "First Date",
     artist: "Blink-182",
     duration: "2:51",
-    src: "/music/Blink-182 - First Date.mp3",
-    cover: "/music/caratula2.jpg",
+    src: assetUrl("music/Blink-182 - First Date.mp3"),
+    cover: assetUrl("music/caratula2.jpg"),
   },
   {
     title: "Everytime",
     artist: "Simple Plan",
     duration: "3:45",
-    src: "/music/Simple plan - Everytime.mp3",
-    cover: "/music/caratula3.jpg",
+    src: assetUrl("music/Simple plan - Everytime.mp3"),
+    cover: assetUrl("music/caratula3.jpg"),
   },
   {
     title: "Bedingfield",
     artist: "Simple Plan",
     duration: "3:45",
-    src: "/music/Simple Plan - Jet lag ft Natasha Bedingfield.mp3",
-    cover: "/music/caratula1.jpg",
+    src: assetUrl("music/Simple Plan - Jet lag ft Natasha Bedingfield.mp3"),
+    cover: assetUrl("music/caratula1.jpg"),
   },
   {
     title: "In Too Deep",
     artist: "Sum 41",
     duration: "3:27",
-    src: "/music/Sum 41 - In Too Deep.mp3",
-    cover: "/music/caratula4.jpg",
+    src: assetUrl("music/Sum 41 - In Too Deep.mp3"),
+    cover: assetUrl("music/caratula4.jpg"),
   },
 
   {
     title: "Superman",
     artist: "Eminem",
     duration: "5:50",
-    src: "/music/Eminem - Superman ft. Dina Rae.mp3",
-    cover: "/music/caratula6.jpg",
+    src: assetUrl("music/Eminem - Superman ft. Dina Rae.mp3"),
+    cover: assetUrl("music/caratula6.jpg"),
   },
 ];
 

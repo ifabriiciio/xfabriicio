@@ -1,4 +1,5 @@
 const portfolioUrl = "https://soriafabriii-sys.github.io/Portafolio/";
+const assetUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
 
 export default function Portafolio() {
   return (
@@ -11,7 +12,7 @@ export default function Portafolio() {
     >
       <span className="inicio-card-inner">
         <span className="inicio-circle">
-          <img src="/Portafolio.jpg" alt="" draggable="false" />
+          <img src={assetUrl("Portafolio.jpg")} alt="" draggable="false" />
         </span>
         <span className="inicio-card-title">Portafolio</span>
         <span className="inicio-card-desc">Mis diseños y proyectos</span>
